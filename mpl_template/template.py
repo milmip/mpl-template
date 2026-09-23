@@ -577,7 +577,7 @@ class Template:
         if text is None:  # pragma: no branch
             text = "DRAFT"
         x = (0.5 * self.base) / (self.base * self.fig.get_figwidth())
-        y = 1 - self.top / (self.base * self.fig.get_figheight())
+        y = 0.9 - self.top / (self.base * self.fig.get_figheight())
         watermark = self.fig.text(
             x,
             y,
@@ -641,7 +641,7 @@ class Template:
         y = abs(
             (self.bottom - 0.15 * self.base) / (self.base * self.fig.get_figheight())
         )
-        text = "Source:   " + self.path_text
+        text = self.path_text
         textobj = self.fig.text(
             x,
             y,
